@@ -9,7 +9,7 @@ def get_data():
 				 {
 				   "description": "ShoperPrime", 
 				   "name": "shoperprimeapp", 
-				   "label": "POSAPP", 					
+				   "label": "ShoperPrime App", 					
 				   "type": "page"
 				  }, 
 

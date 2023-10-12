@@ -972,7 +972,7 @@ export default {
     ucard(e) {
       if (e.key === "F7") {
         e.preventDefault();
-        this.set_full_amount(1); // Click the "Cash" button
+        this.set_full_amount(1); // Click the "Cash" button 
       } else if (e.key === "F8") {
         e.preventDefault();
         this.set_full_amount(2); // Click the "Credit Card" button
@@ -1422,7 +1422,7 @@ export default {
     document.addEventListener("keydown", this.shortPandSubmit.bind(this));
     document.addEventListener('keydown', this.ucard);
 
-
+    
   },
   beforeDestroy() {
     evntBus.$off("send_invoice_doc_payment");
