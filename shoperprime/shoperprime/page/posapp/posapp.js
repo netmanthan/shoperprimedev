@@ -1,12 +1,12 @@
-{% include "shoperprime/shoperprime/page/shoperprimeapp/onscan.js" %}
-frappe.pages['shoperprimeapp'].on_page_load = function (wrapper) {
+{% include "shoperprime/shoperprime/page/posapp/onscan.js" %}
+frappe.pages['posapp'].on_page_load = function (wrapper) {
 	var page = frappe.ui.make_app_page({
 		parent: wrapper,
 		title: 'ShoperPrime',
 		single_column: true
 	});
 
-	this.page.$PosApp = new frappe.PosApp.shoperprimeapp(this.page);
+	this.page.$PosApp = new frappe.PosApp.posapp(this.page);
 
 	$('div.navbar-fixed-top').find('.container').css('padding', '0');
 

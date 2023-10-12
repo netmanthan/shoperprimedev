@@ -106,7 +106,7 @@ export default {
   methods: {
     check_opening_entry() {
       return frappe
-        .call('shoperprime.shoperprime.api.shoperprimeapp.check_opening_shift', {
+        .call('shoperprime.shoperprime.api.posapp.check_opening_shift', {
           user: frappe.session.user,
         })
         .then((r) => {
@@ -163,7 +163,7 @@ export default {
     },
     get_offers(pos_profile) {
       return frappe
-        .call('shoperprime.shoperprime.api.shoperprimeapp.get_offers', {
+        .call('shoperprime.shoperprime.api.posapp.get_offers', {
           profile: pos_profile,
         })
         .then((r) => {

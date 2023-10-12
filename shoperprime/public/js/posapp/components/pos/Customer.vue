@@ -6,7 +6,7 @@
       auto-select-first
       outlined
       color="primary"
-      :label="frappe._('Customer/ग्राहक')"
+      :label="frappe._('Customer')"
       v-model="customer"
       :items="customers"
       item-text="customer_name"
@@ -84,7 +84,7 @@ export default {
         vm.customers = JSON.parse(localStorage.getItem('customer_storage'));
       }
       frappe.call({
-        method: 'shoperprime.shoperprime.api.shoperprimeapp.get_customer_names',
+        method: 'shoperprime.shoperprime.api.posapp.get_customer_names',
         args: {
           pos_profile: this.pos_profile.pos_profile,
         },
