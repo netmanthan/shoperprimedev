@@ -3,7 +3,7 @@ import Home from './Home.vue';
 frappe.provide('frappe.PosApp');
 
 
-frappe.PosApp.posapp = class {
+frappe.PosApp.shoperprimeapp = class {
     constructor({ parent }) {
         this.$parent = $(document);
         this.page = parent.page;
