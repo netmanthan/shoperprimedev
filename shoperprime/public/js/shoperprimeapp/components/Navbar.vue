@@ -6,7 +6,7 @@
         class="grey--text"
       ></v-app-bar-nav-icon>
       <v-img
-        src="/assets/shoperprime/js/shoperprimeapp/components/pos/pos.svg"
+        src="/assets/shoperprime/js/posapp/components/pos/pos.svg"
         alt="ShoperPrime"
         max-width="36"
         class="mr-2"
@@ -158,7 +158,7 @@ export default {
       snackColor: '',
       snackText: '',
       company: 'ShoperPrime',
-      company_img: '/assets/shoperprime/js/shoperprimeapp/components/pos/pos.svg',
+      company_img: '/assets/shoperprime/js/posapp/components/pos/pos.svg',
       pos_profile: '',
       freeze: false,
       freezeTitle: '',

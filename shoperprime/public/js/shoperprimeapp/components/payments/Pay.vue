@@ -489,7 +489,7 @@ export default {
   methods: {
     check_opening_entry() {
       return frappe
-        .call("shoperprime.shoperprime.api.shoperprimeapp.check_opening_shift", {
+        .call("shoperprime.shoperprime.api.posapp.check_opening_shift", {
           user: frappe.session.user,
         })
         .then((r) => {
@@ -537,7 +537,7 @@ export default {
       const vm = this;
       if (this.customer_name) {
         frappe.call({
-          method: "shoperprime.shoperprime.api.shoperprimeapp.get_customer_info",
+          method: "shoperprime.shoperprime.api.posapp.get_customer_info",
           args: {
             customer: vm.customer_name,
           },

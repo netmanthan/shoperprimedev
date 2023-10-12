@@ -882,7 +882,7 @@ export default {
 
       const vm = this;
       frappe.call({
-        method: "shoperprime.shoperprime.api.shoperprimeapp.submit_invoice",
+        method: "shoperprime.shoperprime.api.posapp.submit_invoice",
         args: {
           data: data,
           invoice: this.invoice_doc,
@@ -991,7 +991,7 @@ export default {
       this.clear_all_amounts();
       if (e) {
         frappe
-          .call("shoperprime.shoperprime.api.shoperprimeapp.get_available_credit", {
+          .call("shoperprime.shoperprime.api.posapp.get_available_credit", {
             customer: this.invoice_doc.customer,
             company: this.pos_profile.company,
           })
@@ -1031,7 +1031,7 @@ export default {
         return;
       }
       frappe.call({
-        method: "shoperprime.shoperprime.api.shoperprimeapp.get_customer_addresses",
+        method: "shoperprime.shoperprime.api.posapp.get_customer_addresses",
         args: { customer: vm.invoice_doc.customer },
         async: true,
         callback: function (r) {
@@ -1078,7 +1078,7 @@ export default {
         );
       }
       frappe.call({
-        method: "shoperprime.shoperprime.api.shoperprimeapp.get_sales_person_names",
+        method: "shoperprime.shoperprime.api.posapp.get_sales_person_names",
         callback: function (r) {
           if (r.message) {
             vm.sales_persons = r.message;
@@ -1132,7 +1132,7 @@ export default {
 
       frappe
         .call({
-          method: "shoperprime.shoperprime.api.shoperprimeapp.update_invoice",
+          method: "shoperprime.shoperprime.api.posapp.update_invoice",
           args: {
             data: formData,
           },
@@ -1146,7 +1146,7 @@ export default {
         .then(() => {
           frappe
             .call({
-              method: "shoperprime.shoperprime.api.shoperprimeapp.create_payment_request",
+              method: "shoperprime.shoperprime.api.posapp.create_payment_request",
               args: {
                 doc: vm.invoice_doc,
               },
