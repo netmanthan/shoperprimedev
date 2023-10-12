@@ -8,7 +8,7 @@
       <v-img
         src="/assets/shoperprime/js/posapp/components/pos/pos.svg"
         alt="ShoperPrime"
-        max-width="32"
+        max-width="36"
         class="mr-2"
         color="primary"
       ></v-img>
