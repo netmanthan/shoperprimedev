@@ -928,31 +928,6 @@ export default {
         payment.amount = 0;
       });
     },
-    // load_print_page() {
-    //   const print_format =
-    //     this.pos_profile.print_format_for_online ||
-    //     this.pos_profile.print_format;
-    //   const letter_head = this.pos_profile.letter_head || 0;
-    //   const url =
-    //     frappe.urllib.get_base_url() +
-    //     "/printview?doctype=Sales%20Invoice&name=" +
-    //     this.invoice_doc.name +
-    //     "&trigger_print=1" +
-    //     "&format=" +
-    //     print_format +
-    //     "&no_letterhead=" +
-    //     letter_head;
-    //   const printWindow = window.open(url, "Print");
-    //   printWindow.addEventListener(
-    //     "load",
-    //     function () {
-    //       printWindow.print();
-    //       // printWindow.close();
-    //       // NOTE : uncomoent this to auto closing printing window
-    //     },
-    //     true
-    //   );
-    // },
     load_print_page() {
       const print_format =
         this.pos_profile.print_format_for_online ||
@@ -967,16 +942,13 @@ export default {
         print_format +
         "&no_letterhead=" +
         letter_head;
-
-      // Open a new window for printing
       const printWindow = window.open(url, "Print");
-
-      // Ensure the window is loaded before attempting to print
       printWindow.addEventListener(
         "load",
         function () {
           printWindow.print();
-          printWindow.close(); // Automatically close the window after printing
+          // printWindow.close();
+          // NOTE : uncomoent this to auto closing printing window
         },
         true
       );
